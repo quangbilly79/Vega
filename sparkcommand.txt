@@ -1,0 +1,12 @@
+spark-submit \
+HiveConnect.py
+
+--name "example_job" \
+--master yarn \
+--deploy-mode cluster \
+--jars "/home/vgdata/hive-warehouse-connector_2.11-1.0.0.7.2.15.0-147.jar"
+--conf spark.sql.hive.hiveserver2.jdbc.url="jdbc:hive2://localhost:10000" \
+--conf spark.datasource.hive.warehouse.load.staging.dir=/tmp \
+--conf spark.sql.extensions="com.hortonworks.spark.sql.rule.Extensions" \
+--conf spark.kryo.registrator=com.qubole.spark.hiveacid.util.HiveAcidKyroRegistrator \
+--conf spark.datasource.hive.warehouse.read.mode=DIRECT_READER_V1 \

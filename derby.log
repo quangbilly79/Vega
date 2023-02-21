@@ -1,0 +1,13 @@
+----------------------------------------------------------------
+Mon Nov 21 13:28:20 ICT 2022:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance a816c00e-0184-98df-93cb-00000272e5a0 
+on database directory C:\Users\quang\PycharmProjects\Vega\metastore_db with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@73d16e93 
+Loaded from file:/C:/SparkEverything/spark3_3_0/jars/derby-10.14.2.0.jar
+java.vendor=Oracle Corporation
+java.runtime.version=17.0.5+9-LTS-191
+user.dir=C:\Users\quang\PycharmProjects\Vega
+os.name=Windows 10
+os.arch=amd64
+os.version=10.0
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''
