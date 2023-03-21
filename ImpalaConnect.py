@@ -2,9 +2,12 @@ from impala.dbapi import connect
 from impala.util import as_pandas
 import pandas as pd
 
-conn = connect(host='172.25.48.129', port=21050) # 21050 la Impala Deamon Frontend port
+conn = connect(host='vftsandbox-node02', port=21050)
+# 21050 là Impala Deamon Frontend port
+# vftsandbox-node02 là Impala Deamon Instance (Check Impala service => Instances trên Cloudera Manager)
+# Miễn là Impala Deamon Instance là đc
 cursor = conn.cursor()
-cursor.execute('SELECT * FROM vega_data.tmp LIMIT 100')
+cursor.execute('SELECT * FROM waka.testtable LIMIT 100')
 description = cursor.description  # prints the result set's schema
 # [('id', 'INT', None, None, None, None, None), ('name', 'STRING', None, None, None, None, None)]
 
